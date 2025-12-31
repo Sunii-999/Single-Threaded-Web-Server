@@ -1,5 +1,7 @@
 # Own documentation explained in own terms
 
+Official Documentation [here](https://doc.rust-lang.org/book/ch21-01-single-threaded.html)
+
 ## TcpListener
 
 _Transmission Control Protocol (TCP)_
