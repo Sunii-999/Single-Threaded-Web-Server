@@ -21,3 +21,18 @@ The incoming `method` on TcpListener returns an iterator that gives us a sequenc
 `BufReader` implements the `std::io::BufRead` trait, which provides the lines method. The lines method returns an iterator of `Result<String, std::io::Error>` by splitting the stream of data whenever it sees a newline byte. To get each String, we map and unwrap each Result.
 
 > The Result might be an error if the data isn’t valid UTF-8 or if there was a problem reading from the stream. Again, a production program should handle these errors more gracefully, but we’re choosing to stop the program in the error case for simplicity.
+
+## unwrap
+
+A method for handling `Result` and `Option` values
+
+> Ex. `let listener = TcpListener::bind("127.0.0.1:7878").unwrap();` > `bind` returns a `Result<TcpListener, std::io::Error>` > `unwrap()`: returns the TcpListener if binding succeeds, if it fails it will panic and exit (e.g. port is already in use.)
+
+the method is equivalent to this:
+
+```rust
+let listener = match TcpListener::bind("127.0.0.1:7878") {
+    Ok(l) => l,
+    Err(e) => panic!("Failed to bind: {}", e),
+};
+```

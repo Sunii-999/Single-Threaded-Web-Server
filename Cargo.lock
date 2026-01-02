@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "Single-Threaded-Web-Server"
+name = "single_threaded_web_server"
 version = "0.1.0"
