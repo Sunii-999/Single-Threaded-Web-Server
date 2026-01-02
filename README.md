@@ -1,4 +1,4 @@
-# Building a Multithreaded Web Server
+# Building a Web Server
 
 This repository taught me how to use TCP and HTTP. Listen to TCP connection on a socket. Parsing a small number of HTTP requests, and after create a proper HTTP response. Finally improve the throughput of the server with a ThreadPool.
 
